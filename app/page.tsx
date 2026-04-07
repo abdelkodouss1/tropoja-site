@@ -139,6 +139,13 @@ export default function TropojaDeliceLandingPage() {
       { name: "Kebab", price: "7,50€" },
     ],
   };
+  const menuSections = [
+    { title: "Hamburgers", items: interactiveMenu.hamburgers },
+    { title: "Tacos", items: interactiveMenu.tacos },
+    { title: "Boissons", items: interactiveMenu.boissons },
+    { title: "Assiettes", items: interactiveMenu.assiettes },
+    { title: "Sandwichs", items: interactiveMenu.sandwichs },
+  ];
 
   const fadeUp = {
     hidden: { opacity: 0, y: 35 },
@@ -457,24 +464,18 @@ export default function TropojaDeliceLandingPage() {
           </div>
 
           <div className="mt-8 grid gap-6 lg:grid-cols-2">
-            {[
-              ["Hamburgers", interactiveMenu.hamburgers],
-              ["Tacos", interactiveMenu.tacos],
-              ["Boissons", interactiveMenu.boissons],
-              ["Assiettes", interactiveMenu.assiettes],
-              ["Sandwichs", interactiveMenu.sandwichs],
-            ].map(([title, items]) => (
+            {menuSections.map((section) => (
               <motion.div
-                key={title}
+                key={section.title}
                 variants={fadeUp}
                 whileHover={{ y: -6 }}
                 className="rounded-[1.75rem] border border-[#f0dfd0] bg-white/90 p-6 shadow-md shadow-orange-50"
               >
                 <h4 className="text-2xl font-semibold text-[#2b1d12]">
-                  {title}
+                  {section.title}
                 </h4>
                 <div className="mt-6 space-y-3">
-                  {items.map((item) => (
+                  {section.items.map((item) => (
                     <div
                       key={item.name}
                       className="flex items-center justify-between gap-4 rounded-2xl border border-[#f3e4d6] bg-[#fffaf6] px-4 py-3 transition hover:bg-[#fff4ea]"
