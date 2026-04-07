@@ -1,20 +1,28 @@
+"use client";
+
+import { motion } from "framer-motion";
+
 export default function TropojaDeliceLandingPage() {
   const galleryImages = [
     {
-      title: "Devanture du restaurant",
-      image: "/images/restaurant-exterieur.jpg",
+      title: "Salle chaleureuse",
+      image:
+        "https://images.unsplash.com/photo-1552566626-52f8b828add9?auto=format&fit=crop&w=1200&q=80",
     },
     {
-      title: "Carte burgers et tacos",
-      image: "/images/menu-hamburgers-tacos.jpg",
+      title: "Burger gourmand",
+      image:
+        "https://images.unsplash.com/photo-1550547660-d9450f859349?auto=format&fit=crop&w=1200&q=80",
     },
     {
-      title: "Carte boissons",
-      image: "/images/menu-boissons.jpg",
+      title: "Grillades savoureuses",
+      image:
+        "https://images.unsplash.com/photo-1529006557810-274b9b2fc783?auto=format&fit=crop&w=1200&q=80",
     },
     {
-      title: "Carte assiettes et sandwichs",
-      image: "/images/menu-assiettes-sandwichs.jpg",
+      title: "Sandwich et assiette",
+      image:
+        "https://images.unsplash.com/photo-1603360946369-dc9bb6258143?auto=format&fit=crop&w=1200&q=80",
     },
   ];
 
@@ -29,91 +37,66 @@ export default function TropojaDeliceLandingPage() {
   ];
 
   const strengths = [
-    "Portions généreuses",
-    "Viandes fraîches et de qualité",
-    "Service chaleureux",
-    "Sur place, à emporter et en livraison",
+    {
+      title: "Portions généreuses",
+      text: "Des plats copieux préparés pour satisfaire toutes les envies.",
+    },
+    {
+      title: "Produits de qualité",
+      text: "Des ingrédients savoureux et une préparation soignée à chaque commande.",
+    },
+    {
+      title: "Service chaleureux",
+      text: "Une équipe accueillante pour vous servir rapidement et avec le sourire.",
+    },
+    {
+      title: "Sur place ou à emporter",
+      text: "Profitez du restaurant comme vous le souhaitez, selon votre journée.",
+    },
   ];
 
   const reviews = [
     {
-      name: "Client satisfait",
-      text: "Une adresse appréciée pour ses plats savoureux, ses portions généreuses et son excellent rapport qualité-prix.",
+      name: "Karim",
+      text: "Très bonne adresse, les portions sont généreuses et le service est rapide.",
       rating: "5.0",
     },
     {
-      name: "Habitué du quartier",
-      text: "L'accueil est chaleureux et l'équipe laisse une très bonne impression dès l'arrivée.",
+      name: "Sarah",
+      text: "Accueil chaleureux, plats savoureux et très bon rapport qualité-prix.",
       rating: "5.0",
     },
     {
-      name: "Visiteur de passage",
-      text: "Les clients soulignent souvent la fraîcheur de la viande et l'envie de revenir.",
+      name: "Yacine",
+      text: "Une adresse à retenir à Montpellier, surtout pour les grillades et sandwichs.",
       rating: "4.9",
-    },
-  ];
-
-  const featuredCards = [
-    {
-      title: "Cuisine généreuse",
-      description:
-        "Un site pensé pour donner faim immédiatement avec une mise en avant des portions, de la fraîcheur et de la qualité.",
-    },
-    {
-      title: "Conversion locale",
-      description:
-        "Boutons d'appel, itinéraire, commande et réservation placés aux bons endroits pour transformer les visiteurs en clients.",
-    },
-    {
-      title: "Image plus premium",
-      description:
-        "Design moderne, plus rassurant et plus professionnel qu'une simple page annuaire ou menu basique.",
-    },
-  ];
-
-  const menuPreview = [
-    {
-      title: "Hamburgers & Tacos",
-      subtitle:
-        "Les classiques du restaurant avec les prix visibles directement sur le site.",
-      badge: "Menu",
-      image: "/images/menu-hamburgers-tacos.jpg",
-    },
-    {
-      title: "Boissons",
-      subtitle: "Toutes les boissons proposées avec un aperçu clair et propre.",
-      badge: "Menu",
-      image: "/images/menu-boissons.jpg",
-    },
-    {
-      title: "Assiettes & Sandwichs",
-      subtitle: "Assiettes généreuses, sandwichs et options supplémentaires.",
-      badge: "Menu",
-      image: "/images/menu-assiettes-sandwichs.jpg",
     },
   ];
 
   const stats = [
     { value: "7j/7", label: "Ouvert toute la semaine" },
-    { value: "08:00 - 00:00", label: "Grande amplitude horaire" },
-    {
-      value: "4 services",
-      label: "Sur place, emporter, livraison, sans contact",
-    },
+    { value: "08:00 - 00:00", label: "Horaires larges" },
+    { value: "Sur place & à emporter", label: "Simple et pratique" },
   ];
 
-  const premiumBlocks = [
+  const specialties = [
     {
-      title: "Image plus haut de gamme",
-      text: "Une présence en ligne qui inspire confiance dès les premières secondes et valorise mieux le restaurant.",
+      title: "Burgers",
+      text: "Des burgers généreux préparés avec des ingrédients savoureux.",
+      image:
+        "https://images.unsplash.com/photo-1568901346375-23c9450c58cd?auto=format&fit=crop&w=1200&q=80",
     },
     {
-      title: "Plus de commandes locales",
-      text: "Des boutons d'appel et d'itinéraire visibles immédiatement pour transformer les visiteurs en clients.",
+      title: "Tacos",
+      text: "Des tacos gourmands avec plusieurs choix de viandes.",
+      image:
+        "https://images.unsplash.com/photo-1513104890138-7c749659a591?auto=format&fit=crop&w=1200&q=80",
     },
     {
-      title: "Présentation plus claire de l’offre",
-      text: "Le menu, les horaires, l’adresse et les visuels sont organisés pour être compris en un coup d’œil.",
+      title: "Assiettes",
+      text: "Des assiettes copieuses pour profiter pleinement des grillades.",
+      image:
+        "https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=1200&q=80",
     },
   ];
 
@@ -125,9 +108,6 @@ export default function TropojaDeliceLandingPage() {
       { name: "Chicken Burger", price: "7,50€" },
       { name: "Chèvre Miel", price: "8,50€" },
       { name: "Végétarien", price: "7,50€" },
-      { name: "Tendres x6", price: "6,00€" },
-      { name: "Wings x6", price: "6,00€" },
-      { name: "Nuggets", price: "6,00€" },
     ],
     tacos: [
       { name: "1 Viande", price: "8,00€" },
@@ -135,624 +115,562 @@ export default function TropojaDeliceLandingPage() {
       { name: "3 Viandes", price: "10,50€" },
     ],
     boissons: [
-      { name: "Fanta Exotique", price: "1,50€" },
-      { name: "Golden Eagle", price: "1,50€" },
-      { name: "B52", price: "1,50€" },
-      { name: "Bravo Pêche", price: "1,50€" },
-      { name: "Bravo Raisin", price: "1,50€" },
-      { name: "Bravo Pomme", price: "1,50€" },
-      { name: "Ivi Orange", price: "1,50€" },
-      { name: "Ayran", price: "1,50€" },
-      { name: "Pepsi", price: "1,50€" },
       { name: "Coca-Cola", price: "1,50€" },
       { name: "Fanta Orange", price: "1,50€" },
-      { name: "Fanta Citron", price: "1,50€" },
-      { name: "Schweppes", price: "1,50€" },
       { name: "Oasis", price: "1,50€" },
       { name: "Tropico", price: "1,50€" },
       { name: "Lipton", price: "1,50€" },
+      { name: "Ayran", price: "1,50€" },
     ],
     assiettes: [
-      { name: "Kefta Mariné x3", price: "9,00€" },
+      { name: "Kefta Marinée x3", price: "9,00€" },
       { name: "Poulet Mariné x3", price: "9,00€" },
       { name: "Bœuf Mariné x3", price: "9,00€" },
       { name: "Merguez Marinées x3", price: "9,00€" },
-      { name: "Emincés de Kebab", price: "8,00€" },
-      { name: "Cotelettes x3", price: "10,00€" },
+      { name: "Émincés de Kebab", price: "8,00€" },
+      { name: "Côtelettes x3", price: "10,00€" },
     ],
     sandwichs: [
-      { name: "Kefta Mariné", price: "8,00€" },
+      { name: "Kefta Marinée", price: "8,00€" },
       { name: "Poulet Mariné", price: "8,00€" },
       { name: "Bœuf Mariné", price: "8,00€" },
-      { name: "Cœur Mariné", price: "8,00€" },
-      { name: "Foie", price: "8,00€" },
-      { name: "Americain", price: "8,00€" },
+      { name: "Américain", price: "8,00€" },
       { name: "Merguez", price: "8,00€" },
-      { name: "Kébap", price: "7,50€" },
-    ],
-    menuExtra: [
-      "Cordon Bleu",
-      "Kefta",
-      "Nuggets",
-      "Escalope de Poulet",
-      "Merguez",
-      "Kébap",
-    ],
-    tacosMeats: [
-      "Kefta",
-      "Poulet",
-      "Bœuf",
-      "Kébap",
-      "Nuggets",
-      "Escalope de Poulet",
-      "Merguez",
-      "Cordon Bleu",
+      { name: "Kebab", price: "7,50€" },
     ],
   };
 
+  const fadeUp = {
+    hidden: { opacity: 0, y: 35 },
+    show: {
+      opacity: 1,
+      y: 0,
+      transition: { duration: 0.7, ease: "easeOut" },
+    },
+  };
+
+  const stagger = {
+    hidden: {},
+    show: {
+      transition: {
+        staggerChildren: 0.12,
+      },
+    },
+  };
+
   return (
-    <div className="min-h-screen bg-neutral-950 text-white">
-      <header className="sticky top-0 z-50 border-b border-white/10 bg-neutral-950/80 backdrop-blur">
+    <div className="min-h-screen bg-[radial-gradient(circle_at_top_left,rgba(255,214,153,0.35),transparent_28%),radial-gradient(circle_at_bottom_right,rgba(255,186,104,0.22),transparent_26%),linear-gradient(180deg,#fff8ef_0%,#f8ead8_45%,#f5e1cb_100%)] text-[#2b1d12]">
+      <header className="sticky top-0 z-50 border-b border-[#ead4be] bg-[#fff7ee]/80 backdrop-blur-xl">
         <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4">
           <div>
-            <p className="text-xs uppercase tracking-[0.35em] text-amber-400">
+            <p className="text-xs uppercase tracking-[0.35em] text-amber-700">
               Montpellier
             </p>
-            <h1 className="text-xl font-semibold">Tropoja Délice</h1>
+            <h1 className="text-xl font-semibold text-[#2b1d12]">
+              Tropoja Délice
+            </h1>
           </div>
-          <nav className="hidden gap-6 text-sm text-white/80 md:flex">
-            <a href="#concept" className="hover:text-white">
-              Concept
+
+          <nav className="hidden gap-6 text-sm text-[#6a5140] md:flex">
+            <a href="#specialites" className="transition hover:text-[#2b1d12]">
+              Spécialités
             </a>
-            <a href="#menu" className="hover:text-white">
+            <a href="#menu" className="transition hover:text-[#2b1d12]">
               Menu
             </a>
-            <a href="#atouts" className="hover:text-white">
-              Atouts
+            <a href="#galerie" className="transition hover:text-[#2b1d12]">
+              Galerie
             </a>
-            <a href="#avis" className="hover:text-white">
+            <a href="#avis" className="transition hover:text-[#2b1d12]">
               Avis
             </a>
-            <a href="#infos" className="hover:text-white">
+            <a href="#infos" className="transition hover:text-[#2b1d12]">
               Infos
             </a>
           </nav>
-          <a
-            href="tel:+33956287322"
-            className="hidden rounded-2xl bg-amber-400 px-5 py-2.5 text-sm font-semibold text-neutral-950 transition hover:scale-[1.02] md:inline-flex"
-          >
-            Appeler
-          </a>
+
+          <div className="hidden items-center gap-3 md:flex">
+            <a
+              href="https://wa.me/33956287322"
+              target="_blank"
+              rel="noreferrer"
+              className="rounded-2xl border border-[#dfc3a7] bg-white/70 px-5 py-2.5 text-sm font-semibold text-[#5a3d2b] shadow-sm transition hover:-translate-y-0.5 hover:bg-white"
+            >
+              WhatsApp
+            </a>
+            <a
+              href="tel:+33956287322"
+              className="rounded-2xl bg-gradient-to-r from-amber-500 to-orange-500 px-5 py-2.5 text-sm font-semibold text-white shadow-lg shadow-orange-200 transition hover:-translate-y-0.5 hover:scale-[1.02]"
+            >
+              Appeler
+            </a>
+          </div>
         </div>
       </header>
 
       <section className="relative overflow-hidden">
-        <div
+        <motion.div
+          initial={{ scale: 1.08 }}
+          animate={{ scale: 1 }}
+          transition={{ duration: 1.6, ease: "easeOut" }}
           className="absolute inset-0 bg-cover bg-center"
-          style={{ backgroundImage: "url('/images/restaurant-exterieur.jpg')" }}
+          style={{
+            backgroundImage:
+              "url('https://images.unsplash.com/photo-1514933651103-005eec06c04b?auto=format&fit=crop&w=1600&q=80')",
+          }}
         />
-        <div className="absolute inset-0 bg-neutral-950/70" />
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(251,191,36,0.18),transparent_30%),radial-gradient(circle_at_left,rgba(255,255,255,0.08),transparent_25%)]" />
+        <div className="absolute inset-0 bg-[#fff7ef]/45" />
+        <div className="absolute inset-0 bg-gradient-to-r from-[#fff4e8]/95 via-[#fff4e8]/78 to-[#fff4e8]/15" />
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(255,255,255,0.65),transparent_35%),radial-gradient(circle_at_bottom_right,rgba(251,191,36,0.2),transparent_25%)]" />
+
         <div className="relative mx-auto grid max-w-7xl gap-10 px-6 py-20 md:grid-cols-2 md:py-32">
-          <div className="flex flex-col justify-center">
-            <span className="mb-4 w-fit rounded-full border border-amber-400/30 bg-amber-400/10 px-4 py-2 text-sm text-amber-300 backdrop-blur">
-              Nouveau site vitrine premium
-            </span>
-            <h2 className="max-w-xl text-4xl font-bold leading-tight md:text-6xl">
-              Le goût, la générosité et la confiance dès le premier clic.
-            </h2>
-            <p className="mt-6 max-w-xl text-lg leading-8 text-white/80">
-              Une page d'accueil moderne pensée pour donner faim, rassurer les
-              clients et transformer plus de visiteurs en commandes.
-            </p>
-            <div className="mt-8 flex flex-wrap gap-4">
-              <a
-                href="tel:+33956287322"
-                className="rounded-2xl bg-amber-400 px-6 py-3 font-medium text-neutral-950 transition hover:scale-[1.02]"
-              >
-                Appeler le restaurant
-              </a>
+          <motion.div
+            variants={stagger}
+            initial="hidden"
+            animate="show"
+            className="flex flex-col justify-center"
+          >
+            <motion.span
+              variants={fadeUp}
+              className="mb-4 w-fit rounded-full border border-amber-300 bg-white/80 px-4 py-2 text-sm text-amber-800 shadow-sm backdrop-blur"
+            >
+              Grillades • Burgers • Tacos • Sandwichs
+            </motion.span>
+
+            <motion.h2
+              variants={fadeUp}
+              className="max-w-xl text-4xl font-bold leading-tight text-[#2b1d12] md:text-6xl"
+            >
+              Des plats généreux et savoureux dans une ambiance chaleureuse.
+            </motion.h2>
+
+            <motion.p
+              variants={fadeUp}
+              className="mt-6 max-w-xl text-lg leading-8 text-[#5f4a3b]"
+            >
+              Découvrez Tropoja Délice, votre adresse gourmande à Montpellier
+              pour profiter de burgers, tacos, assiettes et sandwichs préparés
+              avec soin.
+            </motion.p>
+
+            <motion.div variants={fadeUp} className="mt-8 flex flex-wrap gap-4">
               <a
                 href="#menu"
-                className="rounded-2xl border border-white/20 bg-white/5 px-6 py-3 font-medium text-white transition hover:bg-white/10"
+                className="rounded-2xl bg-gradient-to-r from-amber-500 to-orange-500 px-6 py-3 font-medium text-white shadow-lg shadow-orange-200 transition hover:-translate-y-0.5 hover:scale-[1.02]"
               >
                 Voir le menu
               </a>
-            </div>
-            <div className="mt-8 flex flex-wrap gap-3">
-              {strengths.map((item) => (
-                <span
-                  key={item}
-                  className="rounded-full border border-white/15 bg-black/30 px-4 py-2 text-sm text-white/90 backdrop-blur"
-                >
-                  {item}
-                </span>
-              ))}
-            </div>
-          </div>
+              <a
+                href="tel:+33956287322"
+                className="rounded-2xl border border-[#d9c1aa] bg-white/85 px-6 py-3 font-medium text-[#5a3d2b] shadow-sm transition hover:-translate-y-0.5 hover:bg-white"
+              >
+                Appeler
+              </a>
+              <a
+                href="https://wa.me/33956287322"
+                target="_blank"
+                rel="noreferrer"
+                className="rounded-2xl border border-[#d9c1aa] bg-white/85 px-6 py-3 font-medium text-[#5a3d2b] shadow-sm transition hover:-translate-y-0.5 hover:bg-white"
+              >
+                WhatsApp
+              </a>
+            </motion.div>
+          </motion.div>
 
-          <div className="grid gap-4 md:grid-cols-2">
-            <div className="rounded-[2rem] border border-white/10 bg-black/40 p-6 shadow-2xl backdrop-blur md:col-span-2">
+          <motion.div
+            variants={stagger}
+            initial="hidden"
+            animate="show"
+            className="grid gap-4 md:grid-cols-2"
+          >
+            <motion.div
+              variants={fadeUp}
+              className="rounded-[2rem] border border-[#ead8c8] bg-white/75 p-6 shadow-2xl shadow-orange-100 backdrop-blur md:col-span-2"
+            >
               <div className="grid gap-4 sm:grid-cols-3">
-                <div className="rounded-2xl border border-white/10 bg-neutral-900/70 p-5">
-                  <p className="text-sm text-white/50">Signature</p>
-                  <p className="mt-3 text-2xl font-semibold">
+                <motion.div
+                  whileHover={{ y: -6 }}
+                  className="rounded-2xl border border-[#f0dfd0] bg-[#fffaf6] p-5 shadow-sm"
+                >
+                  <p className="text-sm text-[#9a7a5b]">Ambiance</p>
+                  <p className="mt-3 text-2xl font-semibold text-[#2b1d12]">
                     Cuisine généreuse
                   </p>
-                  <p className="mt-2 text-sm leading-7 text-white/65">
-                    Une présentation premium pour une adresse locale qui mérite
-                    mieux qu’une simple page menu.
+                  <p className="mt-2 text-sm leading-7 text-[#6a5140]">
+                    Une adresse conviviale où l’on vient pour bien manger et
+                    passer un bon moment.
                   </p>
-                </div>
-                <div className="rounded-2xl border border-white/10 bg-gradient-to-br from-amber-400 to-orange-500 p-5 text-neutral-950">
+                </motion.div>
+
+                <motion.div
+                  whileHover={{ y: -6, scale: 1.02 }}
+                  className="rounded-2xl border border-amber-200 bg-gradient-to-br from-amber-400 to-orange-400 p-5 text-white shadow-lg"
+                >
                   <p className="text-sm font-medium uppercase tracking-[0.2em]">
                     Ouvert 7j/7
                   </p>
                   <p className="mt-3 text-4xl font-bold">08:00</p>
                   <p className="text-lg font-medium">→ 00:00</p>
                   <p className="mt-3 text-sm font-medium">
-                    Commande rapide toute la journée
+                    Commandez facilement toute la journée
                   </p>
-                </div>
-                <div className="rounded-2xl border border-white/10 bg-neutral-900/70 p-5">
-                  <p className="text-sm text-white/50">Adresse</p>
-                  <p className="mt-3 text-xl font-semibold">
+                </motion.div>
+
+                <motion.div
+                  whileHover={{ y: -6 }}
+                  className="rounded-2xl border border-[#f0dfd0] bg-[#fffaf6] p-5 shadow-sm"
+                >
+                  <p className="text-sm text-[#9a7a5b]">Adresse</p>
+                  <p className="mt-3 text-xl font-semibold text-[#2b1d12]">
                     704 Av. Professeur Louis Ravas
                   </p>
-                  <p className="mt-2 text-sm text-white/70">
+                  <p className="mt-2 text-sm text-[#6a5140]">
                     34080 Montpellier, France
                   </p>
-                </div>
+                </motion.div>
               </div>
-            </div>
+            </motion.div>
 
-            <div className="rounded-[2rem] border border-white/10 bg-black/40 p-6 md:col-span-2 backdrop-blur">
-              <p className="text-sm text-amber-300">
-                Pourquoi ce site vend mieux
-              </p>
+            <motion.div
+              variants={fadeUp}
+              className="rounded-[2rem] border border-[#ead8c8] bg-white/75 p-6 shadow-xl shadow-orange-50 backdrop-blur md:col-span-2"
+            >
+              <p className="text-sm text-amber-700">Nos engagements</p>
               <div className="mt-4 grid gap-4 md:grid-cols-3">
-                {featuredCards.map((card) => (
-                  <div
+                {[
+                  {
+                    title: "Qualité",
+                    description:
+                      "Des ingrédients sélectionnés avec soin pour des plats savoureux.",
+                  },
+                  {
+                    title: "Rapidité",
+                    description:
+                      "Un service pratique pour commander facilement au quotidien.",
+                  },
+                  {
+                    title: "Simplicité",
+                    description:
+                      "Toutes les informations utiles réunies en quelques clics.",
+                  },
+                ].map((card) => (
+                  <motion.div
                     key={card.title}
-                    className="rounded-2xl border border-white/10 bg-black/20 p-5"
+                    whileHover={{ y: -6 }}
+                    className="rounded-2xl border border-[#f0dfd0] bg-[#fffaf6] p-5 shadow-sm"
                   >
-                    <h3 className="text-lg font-semibold">{card.title}</h3>
-                    <p className="mt-3 text-sm leading-7 text-white/70">
+                    <h3 className="text-lg font-semibold text-[#2b1d12]">
+                      {card.title}
+                    </h3>
+                    <p className="mt-3 text-sm leading-7 text-[#6a5140]">
                       {card.description}
                     </p>
-                  </div>
+                  </motion.div>
                 ))}
               </div>
-            </div>
-          </div>
+            </motion.div>
+          </motion.div>
         </div>
       </section>
 
-      <section className="mx-auto max-w-7xl px-6 py-4 md:py-10">
-        <div className="grid gap-4 md:grid-cols-3">
-          {stats.map((stat) => (
-            <div
-              key={stat.label}
-              className="rounded-[2rem] border border-white/10 bg-white/5 p-6 text-center"
-            >
-              <p className="text-2xl font-bold text-amber-300">{stat.value}</p>
-              <p className="mt-2 text-sm text-white/70">{stat.label}</p>
-            </div>
-          ))}
-        </div>
-      </section>
+      <motion.section
+        id="specialites"
+        variants={stagger}
+        initial="hidden"
+        whileInView="show"
+        viewport={{ once: true, amount: 0.2 }}
+        className="mx-auto max-w-7xl px-6 py-12 md:py-16"
+      >
+        <motion.div
+          variants={fadeUp}
+          className="rounded-[2.25rem] border border-[#ead8c8] bg-[linear-gradient(180deg,rgba(255,250,243,0.95),rgba(255,245,235,0.92))] p-8 shadow-xl shadow-orange-50 md:p-10"
+        >
+          <p className="text-sm uppercase tracking-[0.25em] text-amber-700">
+            Nos spécialités
+          </p>
+          <h3 className="mt-3 text-3xl font-semibold text-[#2b1d12]">
+            Une carte pensée pour tous les goûts.
+          </h3>
+          <p className="mt-4 max-w-3xl leading-8 text-[#6a5140]">
+            Tropoja Délice vous propose une cuisine généreuse avec burgers,
+            tacos, assiettes et sandwichs préparés pour allier goût, rapidité et
+            plaisir.
+          </p>
 
-      <section id="concept" className="mx-auto max-w-7xl px-6 py-8 md:py-16">
-        <div className="grid gap-6 md:grid-cols-2">
-          <div className="rounded-[2rem] border border-white/10 bg-white/5 p-8">
-            <p className="text-sm uppercase tracking-[0.25em] text-amber-300">
-              L'esprit du lieu
-            </p>
-            <h3 className="mt-4 text-3xl font-semibold">
-              Un restaurant présenté comme une vraie marque locale.
-            </h3>
-            <p className="mt-5 leading-8 text-white/75">
-              Le design met l'accent sur ce qui déclenche l'achat : confiance,
-              faim, simplicité de contact et repères clairs. Le site peut être
-              montré au restaurateur comme une version plus moderne, plus
-              rassurante et plus rentable de sa présence en ligne actuelle.
-            </p>
-          </div>
-          <div className="rounded-[2rem] border border-white/10 bg-white/5 p-8">
-            <p className="text-sm uppercase tracking-[0.25em] text-amber-300">
-              Ce qu'on peut ajouter après
-            </p>
-            <ul className="mt-4 space-y-4 text-white/75">
-              <li>• Vraies photos des plats et de la salle</li>
-              <li>• Menu complet avec prix</li>
-              <li>• Bouton WhatsApp ou commande directe</li>
-              <li>• Google Maps intégré</li>
-              <li>• Réservation ou demande de devis traiteur</li>
-            </ul>
-          </div>
-        </div>
-      </section>
-
-      <section id="menu" className="mx-auto max-w-7xl px-6 py-8 md:py-16">
-        <div className="rounded-[2rem] border border-white/10 bg-white/5 p-8 md:p-10">
-          <div className="flex flex-col gap-4 md:flex-row md:items-end md:justify-between">
-            <div>
-              <p className="text-sm uppercase tracking-[0.25em] text-amber-300">
-                Aperçu du menu
-              </p>
-              <h3 className="mt-3 text-3xl font-semibold">
-                Une carte mise en scène comme un vrai site de restaurant.
-              </h3>
-            </div>
-            <a
-              href="tel:+33956287322"
-              className="inline-flex w-fit rounded-2xl border border-white/15 px-5 py-3 text-sm font-medium text-white transition hover:bg-white/5"
-            >
-              Commander maintenant
-            </a>
-          </div>
-
-          <div className="mt-8 grid gap-6 md:grid-cols-1 lg:grid-cols-2">
-            {menuPreview.map((item) => (
-              <div
+          <div className="mt-8 grid gap-6 md:grid-cols-3">
+            {specialties.map((item) => (
+              <motion.div
                 key={item.title}
-                className="overflow-hidden rounded-[1.75rem] border border-white/10 bg-neutral-900/60"
+                variants={fadeUp}
+                whileHover={{ y: -8 }}
+                className="group overflow-hidden rounded-[1.75rem] border border-[#f0dfd0] bg-white shadow-lg shadow-orange-50"
               >
-                <div className="border-b border-white/10 p-6">
-                  <div className="flex items-center justify-between gap-4">
-                    <div>
-                      <span className="rounded-full border border-amber-400/25 bg-amber-400/10 px-3 py-1 text-xs font-medium text-amber-300">
-                        {item.badge}
-                      </span>
-                      <h4 className="mt-4 text-2xl font-semibold">
-                        {item.title}
-                      </h4>
-                      <p className="mt-3 max-w-xl text-sm leading-7 text-white/65">
-                        {item.subtitle}
-                      </p>
-                    </div>
-                  </div>
-                </div>
-                <div className="bg-black/30 p-4">
+                <div className="overflow-hidden">
                   <img
                     src={item.image}
                     alt={item.title}
-                    className="w-full rounded-[1.25rem] object-contain"
+                    className="h-56 w-full object-cover transition duration-700 group-hover:scale-110"
                   />
                 </div>
-              </div>
+                <div className="p-6">
+                  <h4 className="text-xl font-semibold text-[#2b1d12]">
+                    {item.title}
+                  </h4>
+                  <p className="mt-3 text-sm leading-7 text-[#6a5140]">
+                    {item.text}
+                  </p>
+                </div>
+              </motion.div>
             ))}
           </div>
-        </div>
-      </section>
+        </motion.div>
+      </motion.section>
 
-      <section className="mx-auto max-w-7xl px-6 py-8 md:py-16">
-        <div className="rounded-[2rem] border border-white/10 bg-white/5 p-8 md:p-10">
+      <motion.section
+        id="menu"
+        variants={stagger}
+        initial="hidden"
+        whileInView="show"
+        viewport={{ once: true, amount: 0.15 }}
+        className="mx-auto max-w-7xl px-6 py-4 md:py-10"
+      >
+        <motion.div
+          variants={fadeUp}
+          className="rounded-[2.25rem] border border-[#ead8c8] bg-[linear-gradient(180deg,rgba(255,249,241,0.96),rgba(252,241,228,0.94))] p-8 shadow-xl shadow-orange-50 md:p-10"
+        >
           <div className="flex flex-col gap-4 md:flex-row md:items-end md:justify-between">
             <div>
-              <p className="text-sm uppercase tracking-[0.25em] text-amber-300">
-                Menu interactif
+              <p className="text-sm uppercase tracking-[0.25em] text-amber-700">
+                Menu détaillé
               </p>
-              <h3 className="mt-3 text-3xl font-semibold">
-                Un vrai menu texte avec prix lisibles immédiatement.
+              <h3 className="mt-3 text-3xl font-semibold text-[#2b1d12]">
+                Consultez les produits et les prix en un coup d’œil.
               </h3>
-              <p className="mt-3 max-w-2xl text-sm leading-7 text-white/65">
-                Cette section permet au client de consulter rapidement les
-                produits et les tarifs sans zoomer sur une photo.
-              </p>
             </div>
+
             <a
               href="tel:+33956287322"
-              className="inline-flex w-fit rounded-2xl bg-amber-400 px-5 py-3 text-sm font-semibold text-neutral-950 transition hover:scale-[1.02]"
+              className="inline-flex w-fit rounded-2xl bg-gradient-to-r from-amber-500 to-orange-500 px-5 py-3 text-sm font-semibold text-white shadow-lg shadow-orange-200 transition hover:-translate-y-0.5 hover:scale-[1.02]"
             >
               Commander par téléphone
             </a>
           </div>
 
           <div className="mt-8 grid gap-6 lg:grid-cols-2">
-            <div className="rounded-[1.75rem] border border-white/10 bg-neutral-900/60 p-6">
-              <div className="flex items-center justify-between">
-                <h4 className="text-2xl font-semibold">Hamburgers</h4>
-                <span className="rounded-full border border-white/10 px-3 py-1 text-xs text-amber-300">
-                  Classiques
-                </span>
-              </div>
-              <div className="mt-6 space-y-3">
-                {interactiveMenu.hamburgers.map((item) => (
-                  <div
-                    key={item.name}
-                    className="flex items-center justify-between gap-4 rounded-2xl border border-white/10 px-4 py-3"
-                  >
-                    <span className="text-white/85">{item.name}</span>
-                    <span className="font-semibold text-amber-300">
-                      {item.price}
-                    </span>
-                  </div>
-                ))}
-              </div>
-            </div>
-
-            <div className="rounded-[1.75rem] border border-white/10 bg-neutral-900/60 p-6">
-              <div className="flex items-center justify-between">
-                <h4 className="text-2xl font-semibold">Tacos</h4>
-                <span className="rounded-full border border-white/10 px-3 py-1 text-xs text-amber-300">
-                  Très demandés
-                </span>
-              </div>
-              <div className="mt-6 space-y-3">
-                {interactiveMenu.tacos.map((item) => (
-                  <div
-                    key={item.name}
-                    className="flex items-center justify-between gap-4 rounded-2xl border border-white/10 px-4 py-3"
-                  >
-                    <span className="text-white/85">{item.name}</span>
-                    <span className="font-semibold text-amber-300">
-                      {item.price}
-                    </span>
-                  </div>
-                ))}
-              </div>
-              <div className="mt-6 rounded-[1.5rem] border border-white/10 bg-black/20 p-4">
-                <p className="text-sm font-semibold text-white">Les viandes</p>
-                <div className="mt-3 flex flex-wrap gap-2">
-                  {interactiveMenu.tacosMeats.map((item) => (
-                    <span
-                      key={item}
-                      className="rounded-full border border-white/10 px-3 py-1 text-xs text-white/75"
+            {[
+              ["Hamburgers", interactiveMenu.hamburgers],
+              ["Tacos", interactiveMenu.tacos],
+              ["Boissons", interactiveMenu.boissons],
+              ["Assiettes", interactiveMenu.assiettes],
+              ["Sandwichs", interactiveMenu.sandwichs],
+            ].map(([title, items]) => (
+              <motion.div
+                key={title}
+                variants={fadeUp}
+                whileHover={{ y: -6 }}
+                className="rounded-[1.75rem] border border-[#f0dfd0] bg-white/90 p-6 shadow-md shadow-orange-50"
+              >
+                <h4 className="text-2xl font-semibold text-[#2b1d12]">
+                  {title}
+                </h4>
+                <div className="mt-6 space-y-3">
+                  {items.map((item) => (
+                    <div
+                      key={item.name}
+                      className="flex items-center justify-between gap-4 rounded-2xl border border-[#f3e4d6] bg-[#fffaf6] px-4 py-3 transition hover:bg-[#fff4ea]"
                     >
-                      {item}
-                    </span>
+                      <span className="text-[#4e382b]">{item.name}</span>
+                      <span className="font-semibold text-amber-700">
+                        {item.price}
+                      </span>
+                    </div>
                   ))}
                 </div>
-              </div>
-            </div>
-
-            <div className="rounded-[1.75rem] border border-white/10 bg-neutral-900/60 p-6">
-              <div className="flex items-center justify-between">
-                <h4 className="text-2xl font-semibold">Boissons</h4>
-                <span className="rounded-full border border-white/10 px-3 py-1 text-xs text-amber-300">
-                  1,50€
-                </span>
-              </div>
-              <div className="mt-6 grid gap-3 sm:grid-cols-2">
-                {interactiveMenu.boissons.map((item) => (
-                  <div
-                    key={item.name}
-                    className="flex items-center justify-between gap-4 rounded-2xl border border-white/10 px-4 py-3"
-                  >
-                    <span className="text-white/85">{item.name}</span>
-                    <span className="font-semibold text-amber-300">
-                      {item.price}
-                    </span>
-                  </div>
-                ))}
-              </div>
-            </div>
-
-            <div className="rounded-[1.75rem] border border-white/10 bg-neutral-900/60 p-6">
-              <div className="flex items-center justify-between">
-                <h4 className="text-2xl font-semibold">Assiettes</h4>
-                <span className="rounded-full border border-white/10 px-3 py-1 text-xs text-amber-300">
-                  Généreux
-                </span>
-              </div>
-              <div className="mt-6 space-y-3">
-                {interactiveMenu.assiettes.map((item) => (
-                  <div
-                    key={item.name}
-                    className="flex items-center justify-between gap-4 rounded-2xl border border-white/10 px-4 py-3"
-                  >
-                    <span className="text-white/85">{item.name}</span>
-                    <span className="font-semibold text-amber-300">
-                      {item.price}
-                    </span>
-                  </div>
-                ))}
-              </div>
-            </div>
-
-            <div className="rounded-[1.75rem] border border-white/10 bg-neutral-900/60 p-6">
-              <div className="flex items-center justify-between">
-                <h4 className="text-2xl font-semibold">Sandwichs</h4>
-                <span className="rounded-full border border-white/10 px-3 py-1 text-xs text-amber-300">
-                  Populaires
-                </span>
-              </div>
-              <div className="mt-6 space-y-3">
-                {interactiveMenu.sandwichs.map((item) => (
-                  <div
-                    key={item.name}
-                    className="flex items-center justify-between gap-4 rounded-2xl border border-white/10 px-4 py-3"
-                  >
-                    <span className="text-white/85">{item.name}</span>
-                    <span className="font-semibold text-amber-300">
-                      {item.price}
-                    </span>
-                  </div>
-                ))}
-              </div>
-            </div>
-
-            <div className="rounded-[1.75rem] border border-white/10 bg-neutral-900/60 p-6">
-              <div className="flex items-center justify-between">
-                <h4 className="text-2xl font-semibold">Menu Extra</h4>
-                <span className="rounded-full border border-white/10 px-3 py-1 text-xs text-white/70">
-                  Prix non visibles
-                </span>
-              </div>
-              <p className="mt-3 text-sm leading-7 text-white/60">
-                Les options ci-dessous sont bien visibles sur la carte, mais
-                leur prix n’apparaît pas sur la photo fournie.
-              </p>
-              <div className="mt-4 flex flex-wrap gap-2">
-                {interactiveMenu.menuExtra.map((item) => (
-                  <span
-                    key={item}
-                    className="rounded-full border border-white/10 px-3 py-2 text-sm text-white/80"
-                  >
-                    {item}
-                  </span>
-                ))}
-              </div>
-            </div>
+              </motion.div>
+            ))}
           </div>
-        </div>
-      </section>
+        </motion.div>
+      </motion.section>
 
-      <section className="mx-auto max-w-7xl px-6 py-8 md:py-16">
+      <motion.section
+        id="galerie"
+        variants={stagger}
+        initial="hidden"
+        whileInView="show"
+        viewport={{ once: true, amount: 0.15 }}
+        className="mx-auto max-w-7xl px-6 py-12 md:py-16"
+      >
         <div className="grid gap-6 lg:grid-cols-[1.1fr_0.9fr]">
-          <div className="overflow-hidden rounded-[2rem] border border-white/10 bg-white/5">
-            <div className="border-b border-white/10 px-8 py-6">
-              <p className="text-sm uppercase tracking-[0.25em] text-amber-300">
+          <motion.div
+            variants={fadeUp}
+            className="overflow-hidden rounded-[2.25rem] border border-[#ead8c8] bg-white/85 shadow-xl shadow-orange-50"
+          >
+            <div className="border-b border-[#f0dfd0] px-8 py-6">
+              <p className="text-sm uppercase tracking-[0.25em] text-amber-700">
                 Galerie
               </p>
-              <h3 className="mt-3 text-3xl font-semibold">
-                Des visuels qui aident le client à se projeter.
+              <h3 className="mt-3 text-3xl font-semibold text-[#2b1d12]">
+                Un aperçu du restaurant et de l’univers gourmand.
               </h3>
             </div>
+
             <div className="grid gap-3 p-3 md:grid-cols-2">
               {galleryImages.map((item) => (
-                <div
+                <motion.div
                   key={item.title}
-                  className="overflow-hidden rounded-[1.5rem] border border-white/10 bg-black/30"
+                  variants={fadeUp}
+                  whileHover={{ y: -6 }}
+                  className="group overflow-hidden rounded-[1.5rem] border border-[#f0dfd0] bg-[#fffaf6] shadow-sm"
                 >
-                  <img
-                    src={item.image}
-                    alt={item.title}
-                    className="h-64 w-full object-cover"
-                  />
+                  <div className="overflow-hidden">
+                    <img
+                      src={item.image}
+                      alt={item.title}
+                      className="h-64 w-full object-cover transition duration-700 group-hover:scale-110"
+                    />
+                  </div>
                   <div className="p-4">
-                    <p className="text-sm font-medium text-white/85">
+                    <p className="text-sm font-medium text-[#4e382b]">
                       {item.title}
                     </p>
                   </div>
-                </div>
+                </motion.div>
               ))}
             </div>
-          </div>
+          </motion.div>
 
-          <div className="rounded-[2rem] border border-white/10 bg-gradient-to-br from-amber-400/10 to-orange-500/10 p-8">
-            <p className="text-sm uppercase tracking-[0.25em] text-amber-300">
-              Version agence
+          <motion.div
+            variants={fadeUp}
+            className="rounded-[2.25rem] border border-[#ead8c8] bg-[linear-gradient(180deg,rgba(255,244,229,0.98),rgba(255,249,240,0.96))] p-8 shadow-xl shadow-orange-50"
+          >
+            <p className="text-sm uppercase tracking-[0.25em] text-amber-700">
+              Pourquoi nous choisir
             </p>
-            <h3 className="mt-3 text-3xl font-semibold">
-              Une présentation pensée pour vendre, pas juste montrer.
+            <h3 className="mt-3 text-3xl font-semibold text-[#2b1d12]">
+              Une adresse gourmande pour tous les moments de la journée.
             </h3>
+
             <div className="mt-8 space-y-4">
-              {premiumBlocks.map((item) => (
-                <div
+              {strengths.map((item) => (
+                <motion.div
                   key={item.title}
-                  className="rounded-[1.5rem] border border-white/10 bg-black/20 p-5"
+                  variants={fadeUp}
+                  whileHover={{ x: 4 }}
+                  className="rounded-[1.5rem] border border-[#f0dfd0] bg-white p-5 shadow-sm"
                 >
-                  <p className="text-lg font-semibold">{item.title}</p>
-                  <p className="mt-3 text-sm leading-7 text-white/70">
+                  <p className="text-lg font-semibold text-[#2b1d12]">
+                    {item.title}
+                  </p>
+                  <p className="mt-3 text-sm leading-7 text-[#6a5140]">
                     {item.text}
                   </p>
-                </div>
+                </motion.div>
               ))}
             </div>
-          </div>
+          </motion.div>
         </div>
-      </section>
+      </motion.section>
 
-      <section id="atouts" className="mx-auto max-w-7xl px-6 py-8 md:py-16">
-        <div className="rounded-[2rem] border border-white/10 bg-white/5 p-8 md:p-10">
-          <p className="text-sm uppercase tracking-[0.25em] text-amber-300">
-            Points forts
+      <motion.section
+        id="avis"
+        variants={stagger}
+        initial="hidden"
+        whileInView="show"
+        viewport={{ once: true, amount: 0.2 }}
+        className="mx-auto max-w-7xl px-6 py-12 md:py-16"
+      >
+        <motion.div variants={fadeUp}>
+          <p className="text-sm uppercase tracking-[0.25em] text-amber-700">
+            Avis clients
           </p>
-          <div className="mt-6 grid gap-4 md:grid-cols-2 xl:grid-cols-4">
-            {strengths.map((item) => (
-              <div
-                key={item}
-                className="rounded-2xl border border-white/10 bg-black/20 p-6"
-              >
-                <p className="text-lg font-semibold">{item}</p>
-                <p className="mt-3 text-sm leading-7 text-white/65">
-                  Mis en avant visuellement pour rassurer le visiteur et donner
-                  envie dès les premières secondes.
-                </p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
+          <h3 className="mt-3 text-3xl font-semibold text-[#2b1d12]">
+            Ce que nos clients apprécient.
+          </h3>
+        </motion.div>
 
-      <section id="avis" className="mx-auto max-w-7xl px-6 py-8 md:py-16">
-        <div className="flex items-end justify-between gap-6">
-          <div>
-            <p className="text-sm uppercase tracking-[0.25em] text-amber-300">
-              Avis clients
-            </p>
-            <h3 className="mt-3 text-3xl font-semibold">
-              Une réputation qui mérite un site à la hauteur.
-            </h3>
-          </div>
-        </div>
         <div className="mt-8 grid gap-4 md:grid-cols-3">
           {reviews.map((review) => (
-            <div
+            <motion.div
               key={review.name}
-              className="rounded-[2rem] border border-white/10 bg-white/5 p-6"
+              variants={fadeUp}
+              whileHover={{ y: -8 }}
+              className="rounded-[2rem] border border-[#ead8c8] bg-white/90 p-6 shadow-lg shadow-orange-50"
             >
               <div className="flex items-center justify-between gap-3">
                 <div className="flex items-center gap-3">
-                  <div className="flex h-12 w-12 items-center justify-center rounded-full bg-amber-400 font-bold text-neutral-950">
+                  <div className="flex h-12 w-12 items-center justify-center rounded-full bg-gradient-to-r from-amber-500 to-orange-500 font-bold text-white shadow-md">
                     {review.name.charAt(0)}
                   </div>
                   <div>
-                    <p className="font-semibold">{review.name}</p>
-                    <p className="text-sm text-white/50">
-                      Avis mis en forme pour le site
+                    <p className="font-semibold text-[#2b1d12]">
+                      {review.name}
                     </p>
+                    <p className="text-sm text-[#8d725d]">Client</p>
                   </div>
                 </div>
-                <span className="rounded-full border border-white/10 px-3 py-1 text-sm text-amber-300">
+
+                <span className="rounded-full border border-[#f0dfd0] bg-[#fffaf6] px-3 py-1 text-sm text-amber-700">
                   {review.rating} ★
                 </span>
               </div>
-              <p className="mt-5 leading-8 text-white/75">{review.text}</p>
-            </div>
+
+              <p className="mt-5 leading-8 text-[#6a5140]">{review.text}</p>
+            </motion.div>
           ))}
         </div>
-      </section>
+      </motion.section>
 
-      <section id="infos" className="mx-auto max-w-7xl px-6 py-8 md:py-16">
+      <motion.section
+        id="infos"
+        variants={stagger}
+        initial="hidden"
+        whileInView="show"
+        viewport={{ once: true, amount: 0.15 }}
+        className="mx-auto max-w-7xl px-6 py-12 md:py-16"
+      >
         <div className="grid gap-6 md:grid-cols-[1.1fr_0.9fr]">
-          <div className="rounded-[2rem] border border-white/10 bg-white/5 p-8">
-            <p className="text-sm uppercase tracking-[0.25em] text-amber-300">
+          <motion.div
+            variants={fadeUp}
+            className="rounded-[2.25rem] border border-[#ead8c8] bg-white/90 p-8 shadow-xl shadow-orange-50"
+          >
+            <p className="text-sm uppercase tracking-[0.25em] text-amber-700">
               Informations pratiques
             </p>
-            <h3 className="mt-4 text-3xl font-semibold">
-              Simple, clair, utile.
+            <h3 className="mt-4 text-3xl font-semibold text-[#2b1d12]">
+              Contact & accès
             </h3>
-            <div className="mt-8 space-y-5 text-white/75">
+
+            <div className="mt-8 space-y-5 text-[#6a5140]">
               <div>
-                <p className="text-sm text-white/50">Restaurant</p>
-                <p className="text-lg font-medium text-white">Tropoja Délice</p>
+                <p className="text-sm text-[#8d725d]">Restaurant</p>
+                <p className="text-lg font-medium text-[#2b1d12]">
+                  Tropoja Délice
+                </p>
               </div>
               <div>
-                <p className="text-sm text-white/50">Adresse</p>
-                <p className="text-lg font-medium text-white">
+                <p className="text-sm text-[#8d725d]">Adresse</p>
+                <p className="text-lg font-medium text-[#2b1d12]">
                   704 Av. Professeur Louis Ravas, 34080 Montpellier
                 </p>
               </div>
               <div>
-                <p className="text-sm text-white/50">Téléphone</p>
-                <p className="text-lg font-medium text-white">
+                <p className="text-sm text-[#8d725d]">Téléphone</p>
+                <p className="text-lg font-medium text-[#2b1d12]">
                   +33 9 56 28 73 22
                 </p>
               </div>
               <div>
-                <p className="text-sm text-white/50">Services</p>
-                <p className="text-lg font-medium text-white">
+                <p className="text-sm text-[#8d725d]">Services</p>
+                <p className="text-lg font-medium text-[#2b1d12]">
                   Sur place • À emporter • Livraison • Livraison sans contact
                 </p>
               </div>
             </div>
+
             <div className="mt-8 flex flex-wrap gap-4">
               <a
                 href="tel:+33956287322"
-                className="rounded-2xl bg-amber-400 px-6 py-3 font-medium text-neutral-950 transition hover:scale-[1.02]"
+                className="rounded-2xl bg-gradient-to-r from-amber-500 to-orange-500 px-6 py-3 font-medium text-white shadow-lg shadow-orange-200 transition hover:-translate-y-0.5 hover:scale-[1.02]"
               >
                 Appeler maintenant
               </a>
@@ -760,72 +678,80 @@ export default function TropojaDeliceLandingPage() {
                 href="https://www.google.com/maps/search/?api=1&query=704+Av.+Professeur+Louis+Ravas+34080+Montpellier"
                 target="_blank"
                 rel="noreferrer"
-                className="rounded-2xl border border-white/15 px-6 py-3 font-medium text-white transition hover:bg-white/5"
+                className="rounded-2xl border border-[#d9c1aa] bg-white px-6 py-3 font-medium text-[#5a3d2b] shadow-sm transition hover:-translate-y-0.5 hover:bg-[#fff7f0]"
               >
-                Voir l'itinéraire
+                Ouvrir dans Google Maps
               </a>
             </div>
-          </div>
+          </motion.div>
 
-          <div className="rounded-[2rem] border border-white/10 bg-white/5 p-8">
-            <p className="text-sm uppercase tracking-[0.25em] text-amber-300">
+          <motion.div
+            variants={fadeUp}
+            className="rounded-[2.25rem] border border-[#ead8c8] bg-white/90 p-8 shadow-xl shadow-orange-50"
+          >
+            <p className="text-sm uppercase tracking-[0.25em] text-amber-700">
               Horaires
             </p>
+
             <div className="mt-6 space-y-3">
               {openingHours.map((item) => (
-                <div
+                <motion.div
                   key={item.day}
-                  className="flex items-center justify-between rounded-2xl border border-white/10 px-4 py-3"
+                  whileHover={{ x: 4 }}
+                  className="flex items-center justify-between rounded-2xl border border-[#f0dfd0] bg-[#fffaf6] px-4 py-3"
                 >
-                  <span className="text-white/75">{item.day}</span>
-                  <span className="font-medium text-white">{item.hours}</span>
-                </div>
+                  <span className="text-[#6a5140]">{item.day}</span>
+                  <span className="font-medium text-[#2b1d12]">
+                    {item.hours}
+                  </span>
+                </motion.div>
               ))}
             </div>
-          </div>
-        </div>
-      </section>
 
-      <section className="mx-auto max-w-7xl px-6 pb-24 pt-4 md:pb-24">
-        <div className="rounded-[2rem] border border-amber-400/20 bg-gradient-to-r from-amber-400/15 to-orange-500/10 p-8 md:flex md:items-center md:justify-between">
+            <div className="mt-8 overflow-hidden rounded-[1.5rem] border border-[#f0dfd0] shadow-sm">
+              <iframe
+                title="Google Maps Tropoja Délice"
+                src="https://www.google.com/maps?q=704%20Av.%20Professeur%20Louis%20Ravas%2034080%20Montpellier&z=16&output=embed"
+                className="h-72 w-full"
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+              />
+            </div>
+          </motion.div>
+        </div>
+      </motion.section>
+
+      <motion.section
+        initial={{ opacity: 0, y: 35 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.8 }}
+        className="mx-auto max-w-7xl px-6 pb-24 pt-4 md:pb-24"
+      >
+        <div className="rounded-[2.25rem] border border-amber-200 bg-[linear-gradient(135deg,#fff1da,#fff8ee,#fff3e0)] p-8 shadow-xl shadow-orange-100 md:flex md:items-center md:justify-between">
           <div>
-            <p className="text-sm uppercase tracking-[0.25em] text-amber-300">
-              Proposition commerciale
+            <p className="text-sm uppercase tracking-[0.25em] text-amber-700">
+              Commande rapide
             </p>
-            <h3 className="mt-3 text-3xl font-semibold">
-              Un site qui aide le restaurant à inspirer confiance et vendre
-              plus.
+            <h3 className="mt-3 text-3xl font-semibold text-[#2b1d12]">
+              Envie de commander ou d’obtenir une information ?
             </h3>
-            <p className="mt-4 max-w-2xl leading-8 text-white/75">
-              Cette maquette peut être personnalisée avec leurs vraies photos,
-              leur carte complète et un système de commande ou réservation.
+            <p className="mt-4 max-w-2xl leading-8 text-[#6a5140]">
+              Contactez directement le restaurant par téléphone ou retrouvez
+              facilement l’itinéraire depuis votre position.
             </p>
           </div>
+
           <div className="mt-6 md:mt-0">
             <a
               href="tel:+33956287322"
-              className="inline-flex rounded-2xl bg-amber-400 px-6 py-3 font-medium text-neutral-950 transition hover:scale-[1.02]"
+              className="inline-flex rounded-2xl bg-gradient-to-r from-amber-500 to-orange-500 px-6 py-3 font-medium text-white shadow-lg shadow-orange-200 transition hover:-translate-y-0.5 hover:scale-[1.02]"
             >
-              Présenter la démo
+              Appeler maintenant
             </a>
           </div>
         </div>
-      </section>
-
-      <div className="fixed bottom-4 left-1/2 z-50 w-[calc(100%-1.5rem)] max-w-md -translate-x-1/2 md:hidden">
-        <div className="flex items-center justify-between rounded-[1.5rem] border border-white/10 bg-neutral-900/95 p-3 shadow-2xl backdrop-blur">
-          <div>
-            <p className="text-sm font-semibold">Tropoja Délice</p>
-            <p className="text-xs text-white/55">Ouvert de 08:00 à 00:00</p>
-          </div>
-          <a
-            href="tel:+33956287322"
-            className="rounded-xl bg-amber-400 px-4 py-2 text-sm font-semibold text-neutral-950"
-          >
-            Appeler
-          </a>
-        </div>
-      </div>
+      </motion.section>
     </div>
   );
 }
